@@ -67,7 +67,7 @@ jobs:
         run: npm run lint
       - name: TypeScript compile check
         working-directory: bindings
-        run: npx tsc --noEmit
+        run: npm run typecheck
       - name: Run tests
         working-directory: bindings
         run: npm test

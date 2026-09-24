@@ -22,7 +22,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint src __tests__ --ext .ts",
+    "lint:fix": "eslint src __tests__ --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
     "test": "jest --passWithNoTests",
     "local-invoke": "npx ts-node src/local-invoke.ts",
     "generate": "bash ../scripts/generate-bindings.sh",
