@@ -358,7 +358,7 @@ rg 'panic!|unreachable!|unimplemented!' contracts/*/src/lib.rs | grep -v '#\[cfg
 - [ ] `scripts/check-gitignore-secret-patterns.sh` passes — `.env`, `*.secret`,  
       `deployment.env`, and `deployer.json` remain git-ignored (see  
       [deployer-key-requirements.md](deployer-key-requirements.md#security-checklist)).
-- [ ] `scripts/check-deployer-key-rotation-log.sh` passes — any entry in  
+- [x] `scripts/check-deployer-key-rotation-log.sh` passes — any entry in  
       [`ops/deployer-key-rotation-log.md`](../ops/deployer-key-rotation-log.md) is  
       complete and its drain/archive confirmations are checked.
 - [ ] `scripts/check-rollback-log.sh` passes — any entry in  
