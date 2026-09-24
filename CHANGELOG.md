@@ -39,6 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Complete contract index in `contracts/README.md` covering all 10 contract crates (#503)
 - `docs/bindings-error-mapping.md` documenting how Rust error enums map to TS unions and HTTP status codes (#504)
 - All 10 contract error enums documented in `docs/error_codes.md` (previously only 5 were listed; added mux-delegation, mux-policy, mux-recovery, mux-spending-policy, mux-wallet-registry) (#504)
+- `scripts/check-changelog.sh` — CI automation script validating Keep a Changelog structure and section hygiene (#818)
+- Factory → Account → Policy integration flow documentation and roadmap criteria (#817)
+- Deployer key rotation log template entry and checklist validation (#819)
+- TypeScript bindings npm scripts for `typecheck` and test linting coverage in CI (#820)
 
 ### Changed
 - Upgraded migration notes for `mux-account` in `docs/account-upgrade-migration.md` and inline module docs
@@ -54,7 +58,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Integration test stub for `mux-wallet-registry` in `bindings/__tests__/wallet-registry.test.ts` (#320)
 - All five `MuxBatcherError` variants (`EmptyBatch`, `BatchTooLarge`, `RequiredOperationFailed`, `Unauthorized`, `ReentrancyDetected`) documented with numeric codes and HTTP mappings in `docs/error_codes.md` (#244)
 - Integration test stubs for batcher error cases (`BatchTooLarge`, `RequiredOperationFailed`, `Unauthorized`) added to `bindings/__tests__/batch-integration.test.ts` (#245)
-
-### Changed
 - `mux-account-factory` deploy / simulate paths share `load_accounts_under_cap` so the per-owner Accounts vec stays bounded at 64
 - Documented factory Accounts cap in `docs/storage-griefing.md` and `docs/abi_reference.md`
